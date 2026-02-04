@@ -1,0 +1,277 @@
+/* ============================================
+   MENU SECTION CARDS
+   ============================================ */
+
+.menu-section-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(51, 65, 85, 0.9) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-section-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.menu-section-card:hover::before {
+    left: 100%;
+}
+
+.menu-section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(139, 92, 246, 0.35);
+    border-color: rgba(139, 92, 246, 0.5);
+}
+
+/* ============================================
+   SECTION HEADER
+   ============================================ */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5);
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.menu-section-card:hover .section-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.section-description {
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   FEATURE LIST
+   ============================================ */
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: rgba(139, 92, 246, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: rgba(139, 92, 246, 0.1);
+    transform: translateX(5px);
+}
+
+.feature-bullet {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
+}
+
+.feature-content {
+    color: #e2e8f0;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.feature-content strong {
+    color: #f8fafc;
+    font-weight: 600;
+}
+
+/* ============================================
+   INFO CARD (ya existe en elementos-sitio.css)
+   ============================================ */
+
+.info-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(51, 65, 85, 0.9) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-left: 4px solid #8b5cf6;
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.info-icon svg {
+    color: white;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.col-lg-6 {
+    width: 100%;
+    padding: 0 0.75rem;
+}
+
+@media (min-width: 992px) {
+    .col-lg-6 {
+        width: 50%;
+    }
+}
+
+/* ============================================
+   MENU ITEMS - NUMBERED LIST (original)
+   ============================================ */
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(51, 65, 85, 0.9) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(180deg, #8b5cf6 0%, #7c3aed 100%);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover::before {
+    transform: scaleY(1);
+}
+
+.menu-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+    border-color: rgba(139, 92, 246, 0.5);
+}
+
+.menu-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #a78bfa;
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(124, 58, 237, 0.15) 100%);
+    border-radius: 10px;
+    flex-shrink: 0;
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover .menu-number {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: white;
+    transform: scale(1.1);
+}
+
+.menu-content {
+    flex: 1;
+}
+
+.menu-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item .text-muted {
+    margin-bottom: 0;
+    line-height: 1.7;
+    color: #cbd5e1 !important;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 991px) {
+    .menu-section-card {
+        padding: 1.5rem;
+    }
+
+    .section-icon {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .feature-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

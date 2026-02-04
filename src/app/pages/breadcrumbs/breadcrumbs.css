@@ -1,0 +1,174 @@
+/* Estilos para los ejemplos de breadcrumbs */
+.breadcrumb-example {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Breadcrumb Clásico */
+.breadcrumb-classic {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0.75rem 1rem;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+}
+
+.breadcrumb-classic .breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-classic .breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    padding: 0 0.5rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.breadcrumb-classic a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-classic a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.breadcrumb-classic .active {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Breadcrumb Moderno */
+.breadcrumb-modern {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.5rem;
+}
+
+.breadcrumb-modern .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+    border-radius: 6px;
+    position: relative;
+}
+
+.breadcrumb-modern .breadcrumb-item + .breadcrumb-item::before {
+    content: "→";
+    position: absolute;
+    left: -0.75rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.breadcrumb-modern a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.breadcrumb-modern a:hover {
+    color: var(--accent-color);
+    transform: translateX(2px);
+}
+
+.breadcrumb-modern .active {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+}
+
+/* Breadcrumb con Iconos */
+.breadcrumb-icons {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.75rem;
+}
+
+.breadcrumb-icons .breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-icons .breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    padding: 0 0.5rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.breadcrumb-icons a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.breadcrumb-icons a:hover {
+    background: rgba(99, 102, 241, 0.2);
+    transform: translateY(-2px);
+}
+
+.breadcrumb-icons .active {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.4rem 0.8rem;
+}
+
+/* Breadcrumb Minimalista */
+.breadcrumb-minimal {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.25rem;
+}
+
+.breadcrumb-minimal .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-minimal .breadcrumb-item + .breadcrumb-item::before {
+    content: "•";
+    padding: 0 0.5rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumb-minimal a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.breadcrumb-minimal a:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.breadcrumb-minimal .active {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+/* Animaciones */
+.animate-slide.delay-4 {
+    animation-delay: 0.4s;
+}

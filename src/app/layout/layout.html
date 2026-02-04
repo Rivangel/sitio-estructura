@@ -1,0 +1,44 @@
+<header class="topbar glass">
+    <div class="container container-header">
+        <div class="brand">
+            <span class="gradient-text">Sitio Estructura</span>
+        </div>
+
+        <nav class="menu">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                Inicio
+            </a>
+            <a routerLink="/breadcrumbs" routerLinkActive="active">Breadcrumbs</a>
+            <a routerLink="/elementos" routerLinkActive="active">Elementos</a>
+            <a routerLink="/menu" routerLinkActive="active">Menú</a>
+            <a routerLink="/mapa-sitio" routerLinkActive="active">Mapa</a>
+        </nav>
+
+        <form class="search-box" (submit)="$event.preventDefault(); goSearch()">
+            <input class="form-input" placeholder="Buscar contenido..." [(ngModel)]="quickQuery" name="quickQuery" />
+            <button class="btn-premium btn-search" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </form>
+    </div>
+</header>
+
+<main class="content">
+    <div class="container main-container">
+        <router-outlet></router-outlet>
+    </div>
+</main>
+
+<footer class="footer glass">
+    <div class="container footer-content">
+        <small>Desarrollo Web Profesional &copy; 2026 </small>
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+    </div>
+</footer>
